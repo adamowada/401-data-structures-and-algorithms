@@ -55,10 +55,67 @@ class LinkedList:
         string += "None"
         return string
 
+    def append(self, value):
+        """
+        Inserts node at the end of the linked list (not insert)
+        """
+        node = Node(value)
+
+        if self.head is None:
+            self.head = node
+            return
+
+        current_node = self.head
+
+        while current_node.next is not None:
+            current_node = current_node.next
+        
+        current_node.next = node
+
+    def insert_before(self, target_value, value):
+        """
+        Inserts value node before target_value node
+        """
+        node = Node(value)
+
+        current_node = self.head
+
+        if current_node.value == target_value:
+            self.insert(value)
+            return
+
+        while current_node.next.value is not target_value:
+            current_node = current_node.next
+            if current_node.next == None:
+                print("Error not in linked list")
+                return
+
+        node.next = current_node.next
+        current_node.next = node
+
+    def insert_after(self, target_value, value):
+        """
+        Inserts value node after target_value node
+        """
+        node = Node(value)
+
+        current_node = self.head
+
+        while current_node.value is not target_value:
+            current_node = current_node.next
+            if current_node == None:
+                print("Error not in linked list")
+                return
+
+        node.next = current_node.next
+        current_node.next = node
+
 
 linked_list = LinkedList()
-linked_list.insert('Apple')
-linked_list.insert('Cherry')
+linked_list.append('Apple')
+linked_list.append('Banana')
+linked_list.append('Cherry')
+linked_list.insert_after('Cher0ry', 'Brock')
 # linked_list.insert('Orange')
 # linked_list.insert('Banana')
 # linked_list.insert('Pear')
