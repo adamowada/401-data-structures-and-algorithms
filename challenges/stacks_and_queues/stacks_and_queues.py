@@ -31,14 +31,63 @@ class Stack:
             return self.top.value
 
 
-test_stack = Stack()
-test_stack.push('Apple')
-test_stack.push('Cherry')
-test_stack.push('Banana')
-print(test_stack.peak())
-test_stack.pop()
-print(test_stack.peak())
-test_stack.pop()
-print(test_stack.peak())
-test_stack.pop()
-print(test_stack.is_empty())
+class Queue:
+    def __init__(self):
+        self.front = None
+        self.rear = None
+
+    def enqueue(self, value):
+        if self.front is None:
+            self.front = Node(value)
+            self.rear = self.front
+        else:
+            second = self.rear
+            self.rear = Node(value)
+            second.next = self.rear
+
+    # logic leaves a self.rear
+    def dequeue(self):
+        if self.front:
+            wanted = self.front
+            self.front = self.front.next
+            wanted.next = None
+            return wanted.value
+
+    def peek(self):
+        if self.front is None:
+            raise AttributeError('The Queue is Empty')
+        else:
+            return self.front.value
+
+    def is_empty(self):
+        return self.front == None
+
+
+test_queue = Queue()
+test_queue.enqueue('Adam')
+test_queue.enqueue('Bill')
+test_queue.enqueue('Charles')
+
+print(test_queue.front.value)
+print(test_queue.front.next.next.value)
+test_queue.dequeue()
+print(test_queue.front.value)
+print(test_queue.front.next.value)
+print(test_queue.is_empty())
+test_queue.dequeue()
+test_queue.dequeue()
+print(test_queue.is_empty())
+
+
+
+# test_stack = Stack()
+# test_stack.push('Apple')
+# test_stack.push('Cherry')
+# test_stack.push('Banana')
+# print(test_stack.peak())
+# test_stack.pop()
+# print(test_stack.peak())
+# test_stack.pop()
+# print(test_stack.peak())
+# test_stack.pop()
+# print(test_stack.is_empty())
