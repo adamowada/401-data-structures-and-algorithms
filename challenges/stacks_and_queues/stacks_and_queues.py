@@ -63,31 +63,15 @@ class Queue:
         return self.front == None
 
 
-test_queue = Queue()
-test_queue.enqueue('Adam')
-test_queue.enqueue('Bill')
-test_queue.enqueue('Charles')
+class PseudoQueue:
+    def __init__(self): 
+        self.first = Stack()
+        self.second = Stack()
+    
+    def enqueue(self, value):
+        self.first.push(value)
+        self.second.push(value)
 
-print(test_queue.front.value)
-print(test_queue.front.next.next.value)
-test_queue.dequeue()
-print(test_queue.front.value)
-print(test_queue.front.next.value)
-print(test_queue.is_empty())
-test_queue.dequeue()
-test_queue.dequeue()
-print(test_queue.is_empty())
-
-
-
-# test_stack = Stack()
-# test_stack.push('Apple')
-# test_stack.push('Cherry')
-# test_stack.push('Banana')
-# print(test_stack.peak())
-# test_stack.pop()
-# print(test_stack.peak())
-# test_stack.pop()
-# print(test_stack.peak())
-# test_stack.pop()
-# print(test_stack.is_empty())
+    def dequeue(self):
+        self.first.pop()
+        self.second.pop()
