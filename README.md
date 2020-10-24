@@ -229,3 +229,48 @@ I used a pre-order, DFS, recursive algorithm with a helper function to travers t
 ![Code Challenge 18](assets/fizzbuzz-tree-2.png)
 ![Code Challenge 18](assets/fizzbuzz-tree-3.png)
 ![Code Challenge 18](assets/fizzbuzz-tree-4.png)
+
+
+# Code Challenge 26
+### Demonstration of Insertion Sort
+Insertion sort is a simple sorting method wherein the algorithm first compares the 2nd element in an array to the first, and if it's smaller than the first it moves the second element to the left of the first. If the 2nd element is larger it stays put. 
+
+Then the algorithm moves to the third element. If the 3rd is larger than the second, it stays put. Else if it is smaller than the 2nd, it moves to the left of the 2nd. Then it repeats the process comparing the element to the first element, moving to the left of the first if it is smaller.
+
+In this way, the algorithm moves from the second element through the last element, moving each element to the left if it is smaller, and staying put if it is bigger.
+
+If the element being sorted is the same size as any element being compared, the element being sorted does not move.
+
+### Visual Example of Insertion Sort
+
+Input:
+[4, 3, 2, 10, 12]
+
+Starts sorting 3:
+[4, (3), 2, 10, 12]
+  <--
+
+[(3), 4, 2, 10, 12]
+
+Sort 2:
+[3, 4, (2), 10, 12]
+     <--
+  <--
+[(2), 3, 4, 10, 12]
+
+Sort 10:
+[2, 3, 4, (10), 12]
+           ^
+           stays put
+[2, 3, 4, (10), 12]
+
+Sort 12:
+[2, 3, 4, 10, (12)]
+               ^
+               stays put
+[2, 3, 4, 10, (12)]
+
+
+Output:
+[2, 3, 4, 10, 12]
+
