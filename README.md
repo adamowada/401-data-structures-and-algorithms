@@ -168,3 +168,31 @@ I used an iterative, breadth first approach, utilizing a queue. In my while loop
 ![Code Challenge 16 Whiteboard](assets/find-maximum-binary-tree-2.png)
 ![Code Challenge 16 Whiteboard](assets/find-maximum-binary-tree-3.png)
 ![Code Challenge 16 Whiteboard](assets/find-maximum-binary-tree-4.png)
+
+
+# Code Challenge 17
+### Breadth First Traversal of Binary Tree
+Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+
+### Challenge
+```
+Input:
+       9
+      / \
+     11  7
+    / \  / \
+   8   1 0  14
+    \
+     13
+
+Output:
+[9,11,7,8,1,0,14,13]
+```
+
+### Approach and Efficiency
+I used an iterative approach to traverse a given binary tree, and I utilized a queue. First I dequeued. As each node was visited/dequeued and its value stored, I checked if that dequeued node had children and if so enqueued them. Finally I returned the list of stored values.
+
+### Solution
+![Code Challenge 17 Whiteboard](assets/breadth-first-1.png)
+![Code Challenge 17 Whiteboard](assets/breadth-first-2.png)
+![Code Challenge 17 Whiteboard](assets/breadth-first-3.png)
