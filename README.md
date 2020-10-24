@@ -7,7 +7,7 @@ Adam Owada
 
 
 
-Code Challenge 1
+# Code Challenge 1
 ### Reverse an Array
 Write a function called reverseArray that takes in a list and returns the list in reverse order.
 
@@ -26,7 +26,7 @@ Used a for loop with range to append elements from the list argument into an emp
 ![code challenge 1 whiteboard](assets/array-reverse-2.png)
 
 
-Code Challenge 2
+# Code Challenge 2
 ### Insert Shift Array
 Write a function called insertShiftArray that takes in a list and a value to be added, and returns the list with the value in the middle.
 
@@ -44,7 +44,7 @@ Used math.ceil to find proper index, and list.insert to insert into the list.
 ![code challenge 2 whiteboard](assets/array-shift.png)
 
 
-Code Challenge 3
+# Code Challenge 3
 ### Binary Search a 1d Array
 Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
 
@@ -64,7 +64,7 @@ Successfully used binary search, with Big O time complexity of log(n) where n is
 ![Code Challenge 3 Whiteboard](assets/array-binary-search-3.png)
 
 
-Code Challenge 5
+# Code Challenge 5
 ### Linked List Implementation
 Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
 Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
@@ -84,7 +84,7 @@ Used classes and OOP to solve this challenge. LinkedList instance method insert(
 No whiteboard requirement for this challenge. 
 
 
-Code Challenge 6
+# Code Challenge 6
 ### Linked List Insertions
 Write the following methods for the Linked List class:
 
@@ -119,3 +119,23 @@ Did my insertion methods iteratively with a while loop, checking for the end of 
 
 ### Solution
 ![Code Challenge 06 Whiteboard](assets/ll-insertions.png)
+
+
+# Code Challenge 7
+### Linked List kth From End
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+### Challenge
+```
+ll.kthFromEnd(k)
+Input ll	Arg k	Output
+head -> [1] -> [3] -> [8] -> [2] -> X	0	2
+head -> [1] -> [3] -> [8] -> [2] -> X	2	3
+head -> [1] -> [3] -> [8] -> [2] -> X	6	Exception
+```
+
+### Approach and Efficiency
+I used two pointers, one lagging and one current. I used the k argument as a counter and decremented as part of my while loop. Once k hit 0 I started moving my lagging pointer to its .next. Once current.next is None I knew my current node was the last node in the linked list and I exited the while loop. Then I conditionally returned the lagging pointer's value if k was 0. If k ended greater that 0 it raises an exception
+
+### Solution
+![Code Challenge 07 Whiteboard](assets/ll-kth-from-end.png)
