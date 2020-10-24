@@ -139,3 +139,32 @@ I used two pointers, one lagging and one current. I used the k argument as a cou
 
 ### Solution
 ![Code Challenge 07 Whiteboard](assets/ll-kth-from-end.png)
+
+
+# Code Challenge 16
+### Find Maximum Value in Binary Tree
+Write an instance method called find-maximum-value. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+### Challenge
+```
+Input:
+       9
+      / \
+     11  7
+    / \  / \
+   8   1 0  14
+    \
+     13
+
+Output:
+14
+```
+
+### Approach and Efficiency
+I used an iterative, breadth first approach, utilizing a queue. In my while loop I dequeued and compared its value. Then I enqueued it's children. I did this until the queue was empty, meaning each node had been traversed once
+
+### Solution
+![Code Challenge 16 Whiteboard](assets/find-maximum-binary-tree-1.png)
+![Code Challenge 16 Whiteboard](assets/find-maximum-binary-tree-2.png)
+![Code Challenge 16 Whiteboard](assets/find-maximum-binary-tree-3.png)
+![Code Challenge 16 Whiteboard](assets/find-maximum-binary-tree-4.png)
