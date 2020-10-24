@@ -196,3 +196,36 @@ I used an iterative approach to traverse a given binary tree, and I utilized a q
 ![Code Challenge 17 Whiteboard](assets/breadth-first-1.png)
 ![Code Challenge 17 Whiteboard](assets/breadth-first-2.png)
 ![Code Challenge 17 Whiteboard](assets/breadth-first-3.png)
+
+
+# Code Challenge 18
+### Fizzbuzz Tree
+Write a function called FizzBuzzTree which takes a k-ary tree as an argument.
+Without utilizing any of the built-in methods available to your language, determine whether or not the value of each node is divisible by 3, 5 or both. Create a new tree with the same structure as the original, but the values modified as follows:
+If the value is divisible by 3, replace the value with “Fizz”
+If the value is divisible by 5, replace the value with “Buzz”
+If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+If the value is not divisible by 3 or 5, simply turn the number into a String.
+Return a new tree.
+
+### Challenge
+```
+Input:
+        9
+      / | \
+     1  2  3
+   /|\  |  |
+ 15 3 5 9  4
+
+Output:
+['fizz', '1', 'fizzbuzz', 'fizz', 'buzz', '2', 'fizz', 'fizz', '4']
+```
+
+### Approach and Efficiency
+I used a pre-order, DFS, recursive algorithm with a helper function to travers the k-ary tree and return a new tree, as represented by a list, with fizzbuzz values inside of it. 
+
+### Solution
+![Code Challenge 18](assets/fizzbuzz-tree-1.png)
+![Code Challenge 18](assets/fizzbuzz-tree-2.png)
+![Code Challenge 18](assets/fizzbuzz-tree-3.png)
+![Code Challenge 18](assets/fizzbuzz-tree-4.png)
