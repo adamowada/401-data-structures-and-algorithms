@@ -6,12 +6,15 @@ class Node:
         self.children.append(Node(child))
 
 
-def fizzbuzz_tree(root):
+def fizzbuzz_tree(root, arr=None):
+    if arr == None:
+        arr = []
     if root:
-        print(fizzbuzz(root.value))
+        arr.append(fizzbuzz(root.value))
         if root.children:
             for i in root.children:
-                fizzbuzz_tree(i)
+                fizzbuzz_tree(i, arr)
+    return arr
 
 
 def fizzbuzz(number):
@@ -23,15 +26,3 @@ def fizzbuzz(number):
         return 'fizz'
     return str(number)
 
-
-root = Node(1)
-root.add_child(2)
-root.add_child(3)
-root.add_child(4)
-root.add_child(5)
-root.children[0].add_child(6)
-root.children[1].add_child(7)
-root.children[2].add_child(8)
-root.children[3].add_child(15)
-
-fizzbuzz_tree(root)
