@@ -44,6 +44,26 @@ Used math.ceil to find proper index, and list.insert to insert into the list.
 ![code challenge 2 whiteboard](assets/array-shift.png)
 
 
+Code Challenge 3
+### Binary Search a 1d Array
+Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
+
+### Challenge
+```
+Input	                        Output
+[4,8,15,16,23,42], 15	        2
+[11,22,33,44,55,66,77], 90	    -1
+```
+
+### Approach & Efficiency
+Successfully used binary search, with Big O time complexity of log(n) where n is the number of elements in the input array. 
+
+### Solution
+![Code Challenge 3 Whiteboard](assets/array-binary-search-1.png)
+![Code Challenge 3 Whiteboard](assets/array-binary-search-2.png)
+![Code Challenge 3 Whiteboard](assets/array-binary-search-3.png)
+
+
 Code Challenge 5
 ### Linked List Implementation
 Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
