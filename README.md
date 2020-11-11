@@ -275,5 +275,30 @@ Output:
 [2, 3, 4, 10, 12]
 
 
-# Code Challenge 27
-### Demonstration of Merge Sort
+# Code Challenge 36
+### Breadth-First Traversal of Graph
+Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
+
+### Challenge
+```
+Input:
+
+0 2 3
+|\|/
+| 1-4
+|/
+5
+
+breadth_first(3)
+
+Output:
+3, 1, 0, 2, 4, 5
+```
+
+### Approach and Efficiency
+The graph is an undirected graph whose edges are represented by an adjacency list using a dictionary. I use a queue to traverse the graph starting at the source node, and a travelled list to keep track of traversed nodes. While the queue is truthy, dequeue, iterate over its list of edges, enqueueing if a given node has not been travelled to yet. I use a string to represent the traversal.
+
+### Solution
+![Code Challenge 36](assets/breadth-first-graph-1.png)
+![Code Challenge 36](assets/breadth-first-graph-2.png)
+![Code Challenge 36](assets/breadth-first-graph-3.png)
