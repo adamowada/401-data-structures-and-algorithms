@@ -274,3 +274,6 @@ Sort 12:
 Output:
 [2, 3, 4, 10, 12]
 
+
+# Code Challenge 27
+### Demonstration of Merge Sort
