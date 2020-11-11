@@ -302,3 +302,25 @@ The graph is an undirected graph whose edges are represented by an adjacency lis
 ![Code Challenge 36](assets/breadth-first-graph-1.png)
 ![Code Challenge 36](assets/breadth-first-graph-2.png)
 ![Code Challenge 36](assets/breadth-first-graph-3.png)
+
+
+# Code Challenge 8
+### Zip two linked lists
+Write a function called zipLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1). You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+### Challenge
+```
+zipLists(list1, list2)
+Arg list1 Arg list2	Output
+head -> [1] -> [3] -> [2] -> X	head -> [5] -> [9] -> [4] -> X	head -> [1] -> [5] -> [3] -> [9] -> [2] -> [4] -> X
+head -> [1] -> [3] -> X	head -> [5] -> [9] -> [4] -> X	head -> [1] -> [5] -> [3] -> [9] -> [4] -> X
+head -> [1] -> [3] -> [2] -> X	head -> [5] -> [9] -> X	head -> [1] -> [5] -> [3] -> [9] -> [2] -> X
+```
+
+### Approach and Efficiency
+I used an iterative approach with a while loop, with 2 pointers keeping tracking of the current position outside the while loop and two pointers inside the while loop (temp) keeping track the nexts. Then, I move the current nodes nexts to zip them together.
+
+### Solution
+![Code Challenge 8](assets/ll-zip-1.png)
+![Code Challenge 8](assets/ll-zip-2.png)
+![Code Challenge 8](assets/ll-zip-3.png)
